@@ -1,0 +1,12 @@
+---
+version: "2"
+services:
+  apache-service:
+    container_name: public_website
+    image: httpd:latest
+    cpus: 1.5
+    mem_limit: 2048m
+    ports:
+      - "80:80"
+    volumes:
+    - ./firstProject:/usr/local/apache2/htdocs
